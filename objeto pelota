@@ -1,0 +1,46 @@
+var p;
+
+function setup() {
+  createCanvas(400, 400);
+  p = new Ball();
+}
+
+function draw() {
+  background(220);
+  p.mostrar();
+  p.moverx();
+
+}
+
+/*las clases sirven para definir variables propias creadas en base 
+a los videojuegos, llamando primero la clase con class y desoues a constructor 
+introduciendo primero las caracteristicas que conforman la pelota y despues
+acciones que puede hacer la pelota*/
+
+class Ball {
+  constructor() {
+
+    this.x = 200;
+    this.y = 200;
+    this.tam = 50;
+    this.velx = 3;
+
+  }
+
+  mostrar() {
+    ellipse(this.x, this.y, this.tam, this.tam);
+  }
+
+  moverx() {
+    this.x = this.x + this.velx
+  }
+
+
+}
+
+
+
+
+
+
+
